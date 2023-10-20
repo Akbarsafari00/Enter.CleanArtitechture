@@ -7,9 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ECA.Application.Contracts\ECA.Application.Contracts.csproj" />
       <ProjectReference Include="..\ECA.Infrastructure.Configuration\ECA.Infrastructure.Configuration.csproj" />
-      <ProjectReference Include="..\ECA.Infrastructure.ExternalServices\ECA.Infrastructure.ExternalServices.csproj" />
-      <ProjectReference Include="..\ECA.Infrastructure.Security\ECA.Infrastructure.Security.csproj" />
     </ItemGroup>
 
 </Project>
