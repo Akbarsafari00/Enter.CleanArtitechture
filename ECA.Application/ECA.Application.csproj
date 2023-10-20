@@ -15,7 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="AggregateModels\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Dto\" />
+    <Folder Include="Jobs\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
