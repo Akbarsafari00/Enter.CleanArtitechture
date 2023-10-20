@@ -11,13 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ECA.Application.Contracts\ECA.Application.Contracts.csproj" />
     <ProjectReference Include="..\Enter.CleanArtitechture\ECA.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Dto\" />
-    <Folder Include="Jobs\" />
+    <Folder Include="Models\" />
+    <Folder Include="Queries\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
