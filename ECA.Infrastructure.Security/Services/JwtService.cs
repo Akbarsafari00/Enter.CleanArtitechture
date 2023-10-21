@@ -1,20 +1,21 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using ECA.Application.Contracts.Services;
-using ECA.Infrastructure.Services.Options;
+using ECA.Application.Abstractions.Services;
+using ECA.Application.Abstractions.Services.Security;
+using ECA.Infrastructure.Security.Options;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace ECA.Infrastructure.ExternalServices;
+namespace ECA.Infrastructure.Security.Services;
 
 public class JwtService : IJwtService
 {
     private readonly JwtTokenOptions _jwtTokenOptions;
 
-    public JwtService(IOptions<JwtTokenOptions> jwtTokenOptions)
+    public JwtService(JwtTokenOptions jwtTokenOptions)
     {
-        _jwtTokenOptions = jwtTokenOptions.Value;
+        _jwtTokenOptions = jwtTokenOptions;
     }
 
     public string GenerateToken(string userId, IEnumerable<string> roles)

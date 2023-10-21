@@ -7,9 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ECA.Infrastructure.Configuration\ECA.Infrastructure.Configuration.csproj" />
+      <ProjectReference Include="..\ECA.Infrastructure.DataAccess\ECA.Infrastructure.DataAccess.csproj" />
       <ProjectReference Include="..\ECA.Infrastructure.ExternalServices\ECA.Infrastructure.ExternalServices.csproj" />
       <ProjectReference Include="..\ECA.Infrastructure.Security\ECA.Infrastructure.Security.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+        <PackageReference Include="BCrypt.Net" Version="0.1.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
     </ItemGroup>
 
 </Project>

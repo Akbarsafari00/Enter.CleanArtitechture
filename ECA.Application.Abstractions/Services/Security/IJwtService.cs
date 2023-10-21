@@ -1,4 +1,4 @@
-﻿namespace ECA.Application.Contracts.Services;
+﻿namespace ECA.Application.Abstractions.Services.Security;
 
 public interface IJwtService
 {

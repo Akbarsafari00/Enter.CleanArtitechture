@@ -1,6 +1,7 @@
-﻿using ECA.Application.Contracts.Services;
+﻿using ECA.Application.Abstractions.Services;
+using ECA.Application.Abstractions.Services.Security;
 
-namespace ECA.Infrastructure.ExternalServices;
+namespace ECA.Infrastructure.Security.Services;
 
 public class PasswordEncryptor : IPasswordEncryptor
 {

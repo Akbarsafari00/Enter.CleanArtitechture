@@ -7,8 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ECA.Application.Contracts\ECA.Application.Contracts.csproj" />
-      <ProjectReference Include="..\ECA.Infrastructure.Configuration\ECA.Infrastructure.Configuration.csproj" />
+      <ProjectReference Include="..\ECA.Application.Abstractions\ECA.Application.Abstractions.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="BCrypt.Net" Version="0.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.12" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.2" />
     </ItemGroup>
 
 </Project>
