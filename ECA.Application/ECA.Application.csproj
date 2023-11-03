@@ -1,26 +1,38 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.1" />
-    <PackageReference Include="MediatR" Version="12.1.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Mapster" Version="7.4.0" />
+        <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
 
-  <ItemGroup>
-    <ProjectReference Include="..\ECA.Application.Abstractions\ECA.Application.Abstractions.csproj" />
-    <ProjectReference Include="..\ECA.Domain\ECA.Domain.csproj" />
-    <ProjectReference Include="..\Enter.CleanArtitechture\ECA.Domain.csproj" />
-  </ItemGroup>
+        <PackageReference Include="MediatR" Version="12.1.1" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Optimum.SharedKernal" Version="1.0.2" />
 
-  <ItemGroup>
-    <Folder Include="Futures\Users\Queries\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+        <PackageReference Include="BCrypt.Net" Version="0.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.12" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ECA.Application.Abstractions\ECA.Application.Abstractions.csproj" />
+        <ProjectReference Include="..\ECA.Domain\ECA.Domain.csproj" />
+        <ProjectReference Include="..\Enter.CleanArtitechture\ECA.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Futures\Users\Queries\" />
+    </ItemGroup>
 
 </Project>

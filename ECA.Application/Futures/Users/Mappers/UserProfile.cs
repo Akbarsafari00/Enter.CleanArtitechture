@@ -1,19 +1,18 @@
-﻿using AutoMapper;
-using ECA.Application.Futures.Users.Models;
+﻿using ECA.Application.Futures.Users.Models;
 using ECA.Domain.AggregateModels.UserAggregates;
+using Mapster;
 
 namespace ECA.Application.Futures.Users.Mappers;
 
-public class UserProfile : Profile
+public class UserProfile : IRegister
 {
-    public UserProfile()
+ 
+    public void Register(TypeAdapterConfig config)
     {
-        CreateMap<UserAddress, UserAddressDto>()
-            .ReverseMap();
-        
-        CreateMap<User, UserDto>()
-            .ForMember(x=>x.Status,x=>x.MapFrom(v=>v.Status.Name))
-            .ForMember(x=>x.StatusId,x=>x.MapFrom(v=>v.Status.Id))
-            .ForMember(x=>x.Address,x=>x.MapFrom(v=>v.Address)).ReverseMap();
+        config.NewConfig<UserAddress, UserAddressDto>();
+
+        config.NewConfig<User, UserDto>()
+            .Map(x => x.Status, x => x.Status.Name)
+            .Map(x => x.StatusId, x => x.Status.Id);
     }
 }

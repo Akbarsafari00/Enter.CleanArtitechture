@@ -1,20 +1,19 @@
-﻿using ECA.Domain.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Optimum.SharedKernel.DomainDrivenDesign;
 
-namespace ECA.Domain.AggregateModels.UserAggregates.DomainEvent
+namespace ECA.Domain.AggregateModels.UserAggregates.DomainEvent;
+
+public class UserCreatedDomainEvent : DomainEventBase
 {
-    public class UserCreatedDomainEvent : IDomainEvent
+    public UserCreatedDomainEvent(User user)
     {
-        
-        public User User { get; set; }
-
-        public UserCreatedDomainEvent(User user)
-        {
-            this.User = user ?? throw new ArgumentNullException(nameof(user));
-        }
+        UserId = user.Id;
+        Status = user.Status;
+        Username = user.Username;
+        Address = user.Address;
     }
+
+    public Guid UserId { get; set; }
+    public string Username { get; set; }
+    public UserAddress Address { get; set; }
+    public UserStatus Status { get; set; }
 }
